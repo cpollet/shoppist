@@ -29,38 +29,38 @@
 
 	<body>
 		<script type="text/x-handlebars" data-template-name="application">
-		<div id="wrapper">
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-					<li class="sidebar-brand">
-						<a href="#">
-							Shoppist
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="glyphicon glyphicon-log-in" aria-hidden="true" style="display: inline"></span>
-							Login
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="display: inline"></span>
-							About
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true" style="display: inline"></span>
-							Contact
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- /#sidebar-wrapper -->
+			<div id="wrapper">
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper">
+					<ul class="sidebar-nav">
+						<li class="sidebar-brand">
+							<a href="#">
+								Shoppist
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-log-in" aria-hidden="true" style="display: inline"></span>
+								Login
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="display: inline"></span>
+								About
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true" style="display: inline"></span>
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /#sidebar-wrapper -->
 
-			<!-- Page Content -->
+				<!-- Page Content -->
 				<div id="page-content-wrapper">
 					<div class="container-fluid">
 						<div class="row">
@@ -79,15 +79,25 @@
 		</script>
 
 		<script type="text/x-handlebars" data-template-name="index">
-			<h2>Simple Sidebar</h2>
+			<h2>Shopping lists</h2>
 
-			<p>This template has a responsive menu toggling system. The menu will appear collapsed on
-			smaller screens, and will appear non-collapsed on larger screens. When toggled using the
-			button below, the menu will appear/disappear. On small screens, the page content will be
-			pushed off canvas.</p>
+			<div>
+				<h3>List 1</h3>
+				<ul>
+					<li>Element</li>
+					<li>Element</li>
+					<li>Element</li>
+				</ul>
+			</div>
 
-			<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+			<div>
+				<h3>List 2</h3>
+				<ul>
+					<li>Element</li>
+					<li>Element</li>
+					<li>Element</li>
+				</ul>
+			</div>
 		</script>
 
 		<!-- jQuery -->
@@ -101,13 +111,5 @@
 
 		<script src="js/application.js"></script>
 		<script src="js/router.js"></script>
-
-		<!-- Menu Toggle Script -->
-		<script>
-			$("#menu-toggle").click(function (e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-			});
-		</script>
 	</body>
 </html>

@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-package net.cpollet.shoppist.web.controller;
+package net.cpollet.shoppist.da.repository;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import net.cpollet.shoppist.da.data.Product;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  * @author Christophe Pollet
  */
-@RestController
-public class ShoppingListController {
-// 	@RequestMapping
+public interface ProductRepository extends MongoRepository<Product,String> {
 }

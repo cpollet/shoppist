@@ -16,6 +16,11 @@
 
 package net.cpollet.shoppist.web.controller;
 
+import net.cpollet.shoppist.da.data.Shop;
+import net.cpollet.shoppist.da.repository.ShopRepository;
+import net.cpollet.shoppist.web.rest.ListWrapper;
+import net.cpollet.shoppist.web.rest.ListWrapperBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,9 +28,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Christophe Pollet
  */
 @RestController
-public class UserController {
-	@RequestMapping("/api/v1/users")
-	public String helloWorld() {
-		return "Hello world";
+public class ShopsController {
+	@Autowired
+	private ShopRepository shopRepository;
+
+	@RequestMapping("/api/v1/shops")
+	public ListWrapper<Shop> getLists() {
+		return ListWrapperBuilder.<Shop>aListWrapper() //
+				.withList(shopRepository.findAll()) //
+				.build();
 	}
 }
