@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Christophe Pollet
+ * Copyright 2015 Christophe Pollet
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,28 @@
  * limitations under the License.
  */
 
-package net.cpollet.shoppist.web.controller;
+package net.cpollet.shoppist.web.exceptions;
 
 /**
  * @author Christophe Pollet
  */
-public class ListNotFoundException extends RuntimeException {
-	public ListNotFoundException(String message) {
+public class InvalidCredentialsException extends RuntimeException {
+	public InvalidCredentialsException() {
+	}
+
+	public InvalidCredentialsException(String message) {
 		super(message);
+	}
+
+	public InvalidCredentialsException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public InvalidCredentialsException(Throwable cause) {
+		super(cause);
+	}
+
+	public InvalidCredentialsException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
 	}
 }

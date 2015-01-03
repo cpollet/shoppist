@@ -1,0 +1,11 @@
+<h2>Shopping lists</h2>
+<p class="bg-info">
+	You don't have any list to display. Do you want to start {{#link-to 'lists.new'}}creating one{{/link-to}}?
+	{{#unless session.isAuthenticated}}
+	<br>
+	Or maybe you have an account and want to {{#link-to 'login'}}log in{{/link-to}} to display your lists?
+	{{/unless}}
+</p>
+<p>
+	Shoppist is a ...
+</p>

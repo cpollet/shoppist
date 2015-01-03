@@ -19,6 +19,7 @@ package net.cpollet.shoppist.web.controller;
 import net.cpollet.shoppist.da.data.ShoppingList;
 import net.cpollet.shoppist.da.repository.ShoppingListRepository;
 import net.cpollet.shoppist.service.ShoppingListService;
+import net.cpollet.shoppist.web.exceptions.ListNotFoundException;
 import net.cpollet.shoppist.web.rest.ListWrapper;
 import net.cpollet.shoppist.web.rest.ListWrapperBuilder;
 import net.cpollet.shoppist.web.rest.RestResponse;

@@ -18,7 +18,7 @@ package net.cpollet.shoppist.service;
 
 import net.cpollet.shoppist.da.data.ShoppingList;
 import net.cpollet.shoppist.da.repository.ShoppingListRepository;
-import net.cpollet.shoppist.web.controller.ListNotFoundException;
+import net.cpollet.shoppist.web.exceptions.ListNotFoundException;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 
